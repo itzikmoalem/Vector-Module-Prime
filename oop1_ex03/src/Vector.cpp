@@ -39,13 +39,11 @@ Vector operator+(const Vector& a, const Vector& b)
 
 	int i;
 	for (i = 0; i < minSize; i++)
-	{
 		c[i] = a[i] + b[i];
-	}
+	
 	for (i; i < maxSize; i++)
-	{
 		c[i] = 0;
-	}
+	
 	return c;
 }
 
@@ -57,13 +55,11 @@ Vector operator-(const Vector& a, const Vector& b)
 
 	int i;
 	for (i = 0; i < minSize; i++)
-	{
 		c[i] = a[i] - b[i];
-	}
+	
 	for (i; i < maxSize; i++)
-	{
 		c[i] = 0;
-	}
+
 	return c;
 }
 
@@ -76,13 +72,11 @@ Vector operator*(const Vector& a, const Vector& b)
 
 	int i;
 	for (i = 0; i < minSize; i++)
-	{
 		c[i] = a[i] * b[i];
-	}
+
 	for (i; i < maxSize; i++)
-	{
 		c[i] = 0;
-	}
+
 	return c;
 }
 
@@ -95,9 +89,8 @@ Vector operator/(const Vector& a, const Vector& b)
 
 	int i;
 	for (i = 0; i < minSize; i++)
-	{
 		c[i] = a[i] / b[i];
-	}
+
 	if (minSize != maxSize)
 	{
 		bool bigger = false;
@@ -165,9 +158,8 @@ Vector operator*(const Zp& skalar, const Vector& vec)
 {
 	Vector new1 = vec;
 	for (int i = 0; i < vec.size(); i++)
-	{
 		new1[i] *= skalar;
-	}
+
 	return Vector(new1);
 }
 
@@ -175,17 +167,15 @@ Vector operator*(const Vector& vec, const Zp& skalar)
 {
 	Vector new1 = vec;
 	for (int i = 0; i < vec.size(); i++)
-	{
 		new1[i] *= skalar;
-	}
+
 	return Vector(new1);
 }
 
 std::ostream& operator<<(std::ostream& os, const Vector& vec)	// <<
 {
 	for (int i = 0; i < vec.size(); i++)
-	{
 		os << vec[i] << " ";
-	}
+
 	return os;
 }
