@@ -3,13 +3,10 @@
 
 Zp::Zp(int value)
 {
-
 	if (value < 0)
-	{
 		value += p;
-	}
+	
 	m_number = value % p;
-
 }
 
 
